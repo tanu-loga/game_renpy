@@ -28,11 +28,12 @@ label outside:
      scene bg whitehouse with dissolve
      show eileen concerned
 
-      e "its freezin out here vro"
+     e "its freezin out here vro"
      return
 
 label stay:
-
-     show eileen happy
-    e "much better, its warm here~"
+ 
+    show eileen happy
+ 
+    e "Much better. It's warm in here"
     return
