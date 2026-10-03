@@ -11,13 +11,22 @@ define e = Character("Eileen", color="#c8ffc8")
 label start:
 
     scene bg room with dissolve
-    show eileen happy
+    show renpy
 
-    e "hello"
+    e "You've been acting a bit more strange lately, Yoshiki"
     e "welcome to my game"
 
+    menu emote:
+        e "how are ya?"
+        "Im good":
+            e "yay"
+
+        "not okayish rn":
+            e "aw noo"
+
+
     menu:
-        "go outside":
+        "go OUTSIDE!":
             jump outside
 
         "stay in this room":
@@ -28,7 +37,7 @@ label outside:
      scene bg whitehouse with dissolve
      show eileen concerned
 
-     e "its freezin out here vro"
+     e "its freezin out here vrochaco"
      return
 
 label stay:
