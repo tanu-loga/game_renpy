@@ -85,24 +85,4 @@ label start:
             you "You can try to be like him, atleast..."
 
 
-    menu:
-        "go OUTSIDE!":
-            jump outside
 
-        "stay in this room":
-            jump stay
-
-label outside:
-
-     scene bg whitehouse with dissolve
-     show eileen concerned
-
-     e "its freezin out here vrochaco"
-     return
-
-label stay:
- 
-    show eileen happy
- 
-    e "Much better. It's warm in here"
-    return
