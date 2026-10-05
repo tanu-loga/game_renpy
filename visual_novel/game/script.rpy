@@ -147,10 +147,10 @@ label twoo:
     menu object:
         "Show Object":
             show notebook at truecenter
-            you "\"Dear Yoshiki,"
-            you "\"this is the time around when Hikaru died last year isn't it?\""
-            you "\"Ya must have been suffering alone... I am truly sorry, and I will give you some time alone. \""
-            you "\" You had me worried, sure, but ya should know the past to move forward right?\""
+            notebook "\"Dear Yoshiki,"
+            notebook "\"this is the time around when Hikaru died last year isn't it?\""
+            notebook "\"Ya must have been suffering alone... I am truly sorry, and I will give you some time alone. \""
+            notebook "\" You had me worried, sure, but ya should know the past to move forward right?\""
             you "He actually said something well-meaning for once"
             you "Know the past to move forward, huh?"
             you "I grinned to myself"
