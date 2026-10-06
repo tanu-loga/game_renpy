@@ -1,6 +1,7 @@
 # Another Summer
 
-Whats the best project I can cook up under 5 hours which basically took me 3 days of grinding? This!
+You speak with Hikaru.. But at what cost? This is a slice-of-life.. On the surface.          
+Whats the best project I can cook up under 5 hours which basically took me 3 days of grinding? This visual novel.
 
 ### What is this?
   A visual novel made in Ren'Py! This is based on The Summer Hikaru Died, which is an anime and manga.       
