@@ -19,6 +19,7 @@ transform zoom_out_character:
 # The game starts here.
 
 label start:
+    play music "audio/at-the-end-of-all-things-by-scott-buckley.mp3"
     scene bedroom evening with dissolve
     you "Not yet again."
     you "It was to be a summer no different from another."
@@ -36,15 +37,13 @@ label start:
         "Avoid eye contact":
             you "I can picture her glaring at me, her way of \"convincing\" me to tell her information she wants to know."
             jump eot
-    show satoko at truecenter
     menu eot:
-        you "..."
         "Yeah, studying for my end-of-year is no biggie":
             you "\"Yeah, studying for my end-of-year is no biggie right?\""
         "I'm just focusing on studying for my end-of-year":
             you "\"I'm just focusing on studying for my end-of-year\""
+    satoko normal "Hikaru's been asking to see you everyday"
     menu excuse:
-        satoko normal "Hikaru's been asking to see you everyday"
         "I'm busy":
             you "\"Tell him I'm busy\""
             satoko "\"He asked me to give this to you. I'll give you some time now, okay? Dinner is at 8.\""
@@ -53,7 +52,7 @@ label start:
 
         "Mmm":
             you "Mhm"
-            satoko "\"You seem to be more down overall. Do what keeps you alive and well, okay? Hikaru asked me to give this to you. I'll come back later.\"" 
+            satoko normal "\"You seem to be more down overall. Do what keeps you alive and well, okay? Hikaru asked me to give this to you. I'll come back later.\"" 
             you "\"ok..\""
             hide satoko with dissolve
     you "The air might as well been lead. Every conversation sounds stiff. Every movement delibrate. When did things turn out like this?"
@@ -78,15 +77,16 @@ label start:
             jump endingone
         "You aren't real...":
             you "You aren't real, are you?"
+            hikaru normal "\"You think so?\""
+            hikaru "..."
             jump twoo
     menu endingone:
-        you "Hmm"
         "Yeah":
             hikaru "..."
             you "\"You could have chosen not to go there, not alone. Not up a dangerous damned mountain alone\""
             hikaru normal "\"Perhaps it was an illusion of choice...\""
             you "\"This ain't a dream, is it?\""
-            hikaru "Yeah..."
+            hikaru normal "Yeah..."
             hikaru "\"I know I can never be him.. Not to you...\""
             you "\"Maybe I won't be able to accept he's gone, ever. Not while you are here.\""
             jump dontgo
@@ -95,9 +95,9 @@ label start:
             hikaru "\"I know I can't replace him.\""
             hikaru redeye "\"I have his face, his body, his memories. I behave the same way he does. I can never be him to you, right?\""
             you "\"This aint a dream, is it?\""
+            you "\"Hikaru\" nods"
             jump decideendingone
     menu dontgo:
-        you "..."
         "Please don't go":
             "\"Please don't go back to the mountain again. I know I'm selfish, but whatever the situation, I'll bear the sin with you.\""
             jump almostdone
@@ -106,7 +106,6 @@ label start:
             jump almostdone
 
     menu decideendingone:
-        you "\"Hikaru\" nods"
         "You can try to be like him..":
             you "\"You can try to be like him, atleast...\""
             hikaru danger "\"Why can't I never be like him?..\""
@@ -121,7 +120,6 @@ label start:
 
 
     menu rip:
-        you "\"No NO NO NO\""
         "Hikaru!!":
             you "\"HIKARU COME BACK!!\""
             scene white with blackflash
@@ -132,11 +130,8 @@ label start:
             return
     
 label twoo:
-    hikaru normal "\"You think so?\""
-    hikaru "..."
     you "\"You have his face, his body, his memories. You are him in every way. But I know better..\""
     menu almostdone:
-        hikaru "..."
         "Not gonna be back.":
             you "\"Yet, he isn't going to be back. Not now, not tommorow, not again.\""
         "I can't ask you to be like him":
@@ -146,11 +141,11 @@ label twoo:
     you "Yeah..."
     hikaru "\"I'm sorry you can't mourn your friend as much as you probably want. Perhaps one day, you can truly honour him.\""
     you "\"Maybe someday...\""
-    scene blackscreen with flash
+    scene bedroom evening with flash
     you "I might as well see what he wanted to give me"
     menu object:
         "Show Object":
-            scene blackscreen
+            scene bedroom evening
             show objectatend at truecenter
             you "\"Dear Yoshiki,"
             you "\"this is the time around when Hikaru died last year isn't it?\""
