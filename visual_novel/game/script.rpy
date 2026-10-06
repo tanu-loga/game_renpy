@@ -5,25 +5,29 @@
 
 define you = Character("You", color="#c8ffc8")
 define satoko = Character("Satoko", color="#b4eee1ff", image="satoko")
-define hikaru = Character("Hikaru",color="#e3d1ff", image="hikaru")
-define notebook = Character("Note", color="#b8fff6", image="objectatend.jpg")
+define hikaru = Character("Hikaru",color="#e7d1ff", image="hikaru")
+#define notebook = Character("Note", color="#b8fff6", image="objectatend.jpg")
 define flash = Fade(0.1, 0.0, 0.5, color="#fff")
 define blackflash = Fade(0.1, 0.0, 0.5, color="#000000")
-image bedroom_evening = im.Scale("bedroom evening.jpg", 1500, 2500)
+transform zoom_out_character:
+    subpixel True
+    zoom 1.5        
+    ease 1.0 zoom 1.0  
 
 
 
 # The game starts here.
 
 label start:
-    scene blackscreen with dissolve
+    scene bedroom evening with dissolve
     you "Not yet again."
     you "It was to be a summer no different from another."
     you "I wish it would be what I want it to be."
-
-    menu turn_eye:
-        satoko "\"Your acting different lately\""
+    show satoko unknown at truecenter
+    satoko "\"Your acting different lately\""
+    menu turn_around:
         "Turn around":
+            hide satoko unknown
             show satoko at truecenter
             you "My mother looks at me, almost as if glaring."
             jump eot
@@ -40,7 +44,7 @@ label start:
         "I'm just focusing on studying for my end-of-year":
             you "\"I'm just focusing on studying for my end-of-year\""
     menu excuse:
-        satoko "Hikaru's been asking to see you everyday"
+        satoko normal "Hikaru's been asking to see you everyday"
         "I'm busy":
             you "\"Tell him I'm busy\""
             satoko "\"He asked me to give this to you. I'll give you some time now, okay? Dinner is at 8.\""
@@ -55,8 +59,9 @@ label start:
     you "The air might as well been lead. Every conversation sounds stiff. Every movement delibrate. When did things turn out like this?"
     you "Hikaru is dead." with vpunch
     you "He has been dead for a year."
-    scene blackscreen with flash
-    show hikaru at truecenter
+    scene bedroom morning with flash
+    show hikaru at truecenter 
+    show hikaru at zoom_out_character
     you "\"Hikaru...\""
     hikaru "..."
     you "\"Why did you leave me?\""
@@ -67,7 +72,6 @@ label start:
     you "\"Every single day I glance at your desk, wait for you to grab my shoulder and greet me, to laugh with and read with you, to talk with and simply just exist with you.\""
     you "\"I wish I can follow my normal life with you one more day...\""
     menu mainqendingone:
-        hikaru "..."
         "Why did you die?":
             you "\"Why did you die?\""
             hikaru normal "\"Do you think I had a choice?\""
@@ -146,11 +150,12 @@ label twoo:
     you "I might as well see what he wanted to give me"
     menu object:
         "Show Object":
-            show notebook at truecenter
-            notebook "\"Dear Yoshiki,"
-            notebook "\"this is the time around when Hikaru died last year isn't it?\""
-            notebook "\"Ya must have been suffering alone... I am truly sorry, and I will give you some time alone. \""
-            notebook "\" You had me worried, sure, but ya should know the past to move forward right?\""
+            scene blackscreen
+            show objectatend at truecenter
+            you "\"Dear Yoshiki,"
+            you "\"this is the time around when Hikaru died last year isn't it?\""
+            you "\"Ya must have been suffering alone... I am truly sorry, and I will give you some time alone. \""
+            you "\" You had me worried, sure, but ya should know the past to move forward right?\""
             you "He actually said something well-meaning for once"
             you "Know the past to move forward, huh?"
             you "I grinned to myself"
