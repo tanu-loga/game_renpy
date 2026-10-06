@@ -19,3 +19,4 @@ Whats the best project I can cook up under 5 hours which basically took me 3 day
   Go to https://tanulogan.itch.io/another-summer                                                  
   Done? Next, click Start and then enjoy! Click the text box to move onto the next dialogue. Choose one of the options given to move onto the next part if shown.                         
                     
+Made with love and pain by Tanu!
